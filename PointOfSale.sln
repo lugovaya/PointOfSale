@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale.Api", "PointOfSale.Api\PointOfSale.Api.csproj", "{CDAFD59D-AA17-4AFE-8424-4F13C761F497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale.UnitTests", "PointOfSale.UnitTests\PointOfSale.UnitTests.csproj", "{04B0B483-664D-46F2-9AD5-1F019FD32923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale.Demo", "PointOfSale.Demo\PointOfSale.Demo.csproj", "{D92BA5A1-84EB-46A3-8702-9FBF16158E71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDAFD59D-AA17-4AFE-8424-4F13C761F497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAFD59D-AA17-4AFE-8424-4F13C761F497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAFD59D-AA17-4AFE-8424-4F13C761F497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAFD59D-AA17-4AFE-8424-4F13C761F497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04B0B483-664D-46F2-9AD5-1F019FD32923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B0B483-664D-46F2-9AD5-1F019FD32923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B0B483-664D-46F2-9AD5-1F019FD32923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B0B483-664D-46F2-9AD5-1F019FD32923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92BA5A1-84EB-46A3-8702-9FBF16158E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92BA5A1-84EB-46A3-8702-9FBF16158E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92BA5A1-84EB-46A3-8702-9FBF16158E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92BA5A1-84EB-46A3-8702-9FBF16158E71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
