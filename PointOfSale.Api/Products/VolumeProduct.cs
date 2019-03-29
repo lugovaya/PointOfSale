@@ -5,12 +5,19 @@ namespace PointOfSale.Api.Products
 {
     public class VolumeProduct : Product
     {
+        /// <summary>
+        /// The count of product units to what volume price will be applied
+        /// </summary>
         [Range(1, int.MaxValue)]
-        public int Volume { private get; set; }
+        public int Volume { get; protected internal set; }
         
+        /// <summary>
+        /// The price of products volume
+        /// </summary>
         [RequiredPositiveValue]
-        public decimal VolumePrice { private get; set; }
+        public decimal VolumePrice { get; protected internal set; }
 
+        /// <inheritdoc />
         public override decimal Cost
         {
             get

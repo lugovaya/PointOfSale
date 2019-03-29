@@ -1,6 +1,4 @@
-using System;
 using PointOfSale.Api;
-using PointOfSale.Api.Exceptions;
 using PointOfSale.Api.Products;
 using Xunit;
 
@@ -9,34 +7,6 @@ namespace PointOfSale.UnitTests
     public class TestPointOfSaleTerminator
     {
         private IPaymentSystem<Product> _terminal;
-        
-        [Fact]
-        public void CanSetPricing()
-        {
-            // Assert
-            _terminal = new PointOfSaleTerminal();
-            var product = SellerClient.CreateProduct("A", 1.25m, 3, 3m);
-            
-            // Act
-            _terminal.SetPricing(product);
-            
-            // Arrange
-            Assert.True(true);
-        }
-        
-        [Fact]
-        public void ValidationShouldThrowException()
-        {
-            // Assert
-            _terminal = new PointOfSaleTerminal();
-            var product = SellerClient.CreateProduct("A", -1.25m, 3, 3m);
-            
-            // Act
-            void SetupPricing() => _terminal.SetPricing(product);
-
-            // Arrange
-            Assert.Throws<ValueCantBeNegativeException>((Action) SetupPricing);
-        }
         
         [Fact]
         public void CanScanProduct()
@@ -51,6 +21,7 @@ namespace PointOfSale.UnitTests
             
             // Arrange
             Assert.NotNull(returnedProduct);
+            Assert.Equal(1.25m, returnedProduct.Price);
         }
         
         [Fact]

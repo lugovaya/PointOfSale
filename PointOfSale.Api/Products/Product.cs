@@ -5,16 +5,32 @@ namespace PointOfSale.Api.Products
 {
     public class Product
     {
+        /// <summary>
+        /// Product identifier
+        /// </summary>
         [Required]
-        protected internal string Id { get; set; }
+        public string Id { get; protected internal set; }
         
+        /// <summary>
+        /// The price of product unit
+        /// </summary>
         [RequiredPositiveValue]
-        protected internal decimal Price { get; set; }
+        public decimal Price { get; protected internal set; }
         
-        [RequiredPositiveValue] protected int Count { get; private set; }
+        /// <summary>
+        /// Bought products count
+        /// </summary>
+        [RequiredPositiveValue] 
+        public int Count { get; private set; }
 
+        /// <summary>
+        /// Increases the count when product is bought
+        /// </summary>
         public virtual void Buy() => ++Count;
 
+        /// <summary>
+        /// Calculates the total cost of the product
+        /// </summary>
         public virtual decimal Cost => Count * Price;
     }
 }

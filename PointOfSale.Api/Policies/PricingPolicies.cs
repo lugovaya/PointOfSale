@@ -1,6 +1,6 @@
 using PointOfSale.Api.Products;
 
-namespace PointOfSale.Api
+namespace PointOfSale.Api.Policies
 {
     public abstract class PricingPolicy : Product
     {
@@ -14,6 +14,9 @@ namespace PointOfSale.Api
         public override decimal Cost => _product.Cost;
     }
 
+    /// <summary>
+    /// Pricing policy for retail
+    /// </summary>
     public class UnitPricing : PricingPolicy
     {
         public UnitPricing(Product product) : base(product)
@@ -21,9 +24,12 @@ namespace PointOfSale.Api
         }
     }
     
+    /// <summary>
+    /// Pricing policy for wholesale
+    /// </summary>
     public class VolumePricing : PricingPolicy
     {
-        public VolumePricing(VolumeProduct product) : base(product)
+        public VolumePricing(Product product) : base(product)
         {
         }
     }
