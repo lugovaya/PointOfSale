@@ -14,7 +14,7 @@ namespace PointOfSale.Api
         void SetPricing(T product);
 
         /// <summary>
-        /// Get the product by provided identifier
+        /// Gets the product by provided identifier
         /// </summary>
         T Scan(string id);
 
